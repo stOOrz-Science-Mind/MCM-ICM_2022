@@ -1,0 +1,29 @@
+- 一”步”的定义
+  - 一“步”改变了什么
+    - $v(t)\rightarrow P(t)\rightarrow E(t)\rightarrow \mathrm{next\, decision}$
+  - 步长的定义
+    - 由于是连续函数，因此
+- 疲惫指数 $f_{\mathrm{fatigue}}$（越大越疲劳）
+  - 相关变量
+    - $E(t)$
+    - $\dot{E}(t)$
+  - 定性分析
+    - $E(t)\downarrow\Rightarrow f_{\mathrm{fatigue}}\uparrow$
+    - $\dfrac{\mathrm{d}}{\mathrm{d}t}E(t)\downarrow\Rightarrow f_{\mathrm{fatigue}}\uparrow$
+  - 
+- $f_{\mathrm{fatigue}}$有什么用
+  - 决定了 $\mathrm{Learning\,rate}\xlongequal{\mathrm{def}}L$
+    - $\sigma \left( x \right) =\dfrac{1}{1+e^{-x}}$
+    - $f_{\mathrm{fatigue}}\left( t \right) =\alpha _{\mathrm{fatigue}}\times \mathrm{energy}\:\:\mathrm{proportion}\times \mathrm{how}\:\:\mathrm{tired}\:\:\mathrm{you}\:\:\mathrm{are}
+      \\
+      =\alpha _{\mathrm{fatigue}}\cdot \frac{E\left( t \right)}{E_{\mathrm{total}}}\cdot \left( \frac{\mathrm{instant}\:\:\mathrm{fatigue}\:\:\mathrm{rate}}{f_{\mathrm{fatigue}}^{\Theta}} \right) ^{-1}
+      \\
+      =\alpha _{\mathrm{fatigue}}\cdot \frac{E\left( t \right)}{E_{\mathrm{total}}}\cdot \frac{E\left( t \right) -E_{\mathrm{total}}}{t\cdot \dot{E}\left( t \right)}$
+    - $\alpha _{\mathrm{fatigue}}\in \left[ 0,1 \right] $
+    - $standard\:\:\mathrm{fatigue}\:\:\mathrm{rate}\left( f_{\mathrm{fatigue}}^{\Theta} \right) \xlongequal{\mathrm{def}}\mathrm{average}\:\:\mathrm{fatigue}\:\:\mathrm{rate}=\dfrac{E\left( t \right) -E_{\mathrm{total}}}{t}
+      $
+    - $L\left( f_{\mathrm{fatigue}} \right) =1-\underset{\mathrm{the}\:\:\mathrm{lower}\:\:\mathrm{bound}\:\:\mathrm{rate}}{\underbrace{\dfrac{2}{3}}}\sigma \left( \underset{\mathrm{the}\:\:\mathrm{stretching}\:\:\mathrm{rate}}{\underbrace{10}}\cdot \left( \underset{\mathrm{translation}}{\underbrace{\dfrac{1}{2}-x}} \right) \right) $
+    - 
+
+
+

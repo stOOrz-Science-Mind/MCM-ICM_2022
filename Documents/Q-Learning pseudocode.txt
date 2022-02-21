@@ -1,0 +1,22 @@
+initialize Q-table
+initialize S
+$f_{\mathrm{fatigue}}\leftarrow 0$
+for athlete $i$:
+    randomly initialize the parameter vector $\vec{v}=\left( v_1,v_2,...,v_k \right)$ of $i$ # showing his parameters
+    his current strategy vector $\vec{v\left(t\right)}=\left( v_1\left(t\right),v_2\left(t\right),...,v_k\left(t\right) \right)$ # showing his strategy
+while not at the ending point:
+    \# change his strategy vector $\vec{v\left(t\right)}$ according to Q-table
+    choose a strategy $A$ based on $\vec{v\left(t\right)}$ and P
+
+​	calculate the expected (best) strategy for the current terrain based on previous calculations $\vec{v}^{\Theta}=\left( v_{1}^{\Theta},v_{2}^{\Theta},...,v_{k}^{\Theta} \right) $
+
+​	$\Delta ^{\Theta}v\leftarrow \sqrt{\dfrac{\sum\limits_{i=1}^k{\left( v_i-v_{i}^{\Theta} \right) ^2}}{k}}\xlongequal{\mathrm{def}}f_{\Delta}\left( \vec{v} \right) $
+
+​    $Q(S,A)\gets (1-\underset{\mathrm{learning}\:\:\mathrm{rate}}{\underbrace{\alpha }})Q(S,A)+\underset{\mathrm{learning}\:\:\mathrm{rate}}{\underbrace{\alpha }}[\underset{\mathrm{reward}}{\underbrace{R}}+\underset{\mathrm{discount}\:\:\mathrm{factor}}{\underbrace{\gamma }}\cdot \mathrm{inverse}\:\:\mathrm{strategy}\left( \nabla f_{\Delta}\left( \vec{v} \right) \right) −Q(S,A)]$ 
+​    \# learning rate α can change due to $f_{\mathrm{fatigue}}$
+​    \# when $f_{\mathrm{fatigue}}$ increases, α decreases
+​    Update Q-table
+​    Update $f_{\mathrm{fatigue}}$
+​    Update $\alpha$
+show the best strategy
+
