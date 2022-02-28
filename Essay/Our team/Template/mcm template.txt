@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{allan}
+\usepackage{lastpage}
+
+\setlength{\headheight}{60pt}
+
+\lhead{
+    \parbox{5cm}{
+        \begin{center}
+            Problem Chosen \\[0.2cm]
+            \textbf{\color{allandarkblue}\Huge{A}}
+        \end{center}
+    }
+}
+\chead{
+    \parbox{5cm}{
+        \textbf{
+            \begin{center}
+                2022 \\
+                MCM \\
+                Summary Sheet
+            \end{center}
+        }
+    }
+}
+\rhead{
+    \parbox{5cm}{
+        \begin{center}
+            Team Control Number \\[0.2cm]
+            \textbf{\color{allandarkblue}\Huge{0000}}
+        \end{center}
+    }
+}
+\cfoot{}
+
+\begin{document}
+    \begin{center}
+        \textbf{\large Summary}
+    \end{center}
+
+    This is the summary.
+
+    % real document begins
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \newpage
+    \pagestyle{empty}
+    \setlength{\headheight}{12pt}
+    \renewcommand{\headrulewidth}{0.5pt}
+    % \renewcommand{\headrulewidth}{5cm}
+    \renewcommand{\footrulewidth}{0.0pt}
+    \pagestyle{fancy}
+    \lhead{Team \#2226594}
+    \chead{Power Profile of a Cyclist}
+    \rhead{Page \thepage\ of \pageref{LastPage}}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    ssh
+    \newpage
+    ssh again
+\end{document}s
