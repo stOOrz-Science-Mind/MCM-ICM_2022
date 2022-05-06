@@ -6,4 +6,4 @@ Problem Chosen: A
 
 Title: Power Profile of a Cyclist
 
-Results: Unknown
+Results: Successful Participant
